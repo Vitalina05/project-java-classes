@@ -1,6 +1,6 @@
 package homeTasks;
 
-public class fibonacciNumber {
+public class FibonacciNumber {
 
     public static void main(String argv[]) {
         int prev = 0;
