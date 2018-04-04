@@ -1,20 +1,18 @@
 package homeTasks;
 
 public class arrayAverage {
-
-
     public static void main(String argv[]) {
 
-        int [] arr = new int[5];
-        int l = arr.length;
+        float [] arr = new float[6];
+        float l = arr.length;
 
-        arr[0] = 2;
+        arr[0] = 1;
         arr[1] = 2;
-        arr[2] = 2;
-        arr[3] = 2;
-        arr[4] = 2;
-       // int length = arr.length;
-        int arrayValue= (arr[0]+arr[1]+arr[2]+arr[3]+arr[4]+arr[5])/l;
+        arr[2] = 3;
+        arr[3] = 4;
+        arr[4] = 5;
+        arr[5] = 6;
+        float arrayValue= (arr[0] + arr[1] + arr[2] + arr[3] + arr[4] + arr[5])/l;
 
         System.out.println(arrayValue);
     }
