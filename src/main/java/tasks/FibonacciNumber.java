@@ -1,8 +1,7 @@
-package homeTasks;
+package tasks;
 import java.util.Scanner;
 
 public class FibonacciNumber {
-
     public static void main(String argv[]) {
         int prev = 0;
         int curr = 1;
@@ -22,8 +21,8 @@ public class FibonacciNumber {
                     curr = next;
 
                     System.out.println(prev);
-                }
             }
         }
     }
+}
 
