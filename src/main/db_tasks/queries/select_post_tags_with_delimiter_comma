@@ -1,0 +1,1 @@
+select GROUP_CONCAT(tags SEPARATOR ',') from posts;
