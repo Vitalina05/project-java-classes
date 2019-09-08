@@ -15,7 +15,6 @@ public class Task10 {
         calendar.set(Calendar.DAY_OF_YEAR, 256);
 
         String dayOfWeek = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
-        calendar.getFirstDayOfWeek();
         System.out.println("Day of the Programmer in " + year + " is " + dayOfWeek);
     }
 }
