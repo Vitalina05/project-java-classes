@@ -1,1 +1,0 @@
-mysql> select *from posts ORDER BY date_of_publish DESC LIMIT 5;
