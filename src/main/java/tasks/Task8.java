@@ -1,24 +1,21 @@
 package tasks;
 
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Task8 {
-    public static void main(String[] argv) {
-        System.out.println("Enter your password (at least 8 characters, numbers, lower and upper letters):");
-        String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}$";
+    public static void main(String[] args) {
+        Date date = new Date();
+        Calendar currentCalendar = Calendar.getInstance();
+        currentCalendar.setTime(date);
 
-        Scanner p = new Scanner(System.in);
-        String password = p.nextLine();
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(password);
+        Calendar oldDateInCalendar = Calendar.getInstance();
+        oldDateInCalendar.set(1994, 8, 5);
 
-        while (!matcher.matches()) {
-            System.out.println("Please, enter valid password");
-            password = p.nextLine();
-            matcher = pattern.matcher(password);
-        }
-        System.out.println("Your password is correct!");
+        long milisecondsDate = currentCalendar.getTimeInMillis() - oldDateInCalendar.getTimeInMillis();
+        Date dateInFormat = new Date(milisecondsDate * 1000);
+
+        System.out.println("The difference between today is " + milisecondsDate + " (in miliseconds)");
+        System.out.println("The difference between today is " + dateInFormat + " (in correct format)");
     }
 }

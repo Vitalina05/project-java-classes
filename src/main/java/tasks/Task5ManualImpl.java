@@ -2,7 +2,7 @@ package tasks;
 
 import java.util.Scanner;
 
-public class Task6ManualImpl {
+public class Task5ManualImpl {
     public static void main(String[] args) {
         System.out.println("Please enter a sentence:");
         Scanner w = new Scanner(System.in);
