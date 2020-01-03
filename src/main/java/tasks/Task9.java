@@ -1,20 +1,21 @@
 package tasks;
 
 import java.util.Calendar;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.Date;
 
 public class Task9 {
     public static void main(String[] args) {
-        System.out.println("Please, enter year:");
-        Scanner input = new Scanner(System.in);
-        String year = input.next();
+        Date date = new Date();
+        Calendar currentCalendar = Calendar.getInstance();
+        currentCalendar.setTime(date);
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.YEAR, Integer.parseInt(year));
-        calendar.set(Calendar.DAY_OF_YEAR, 256);
+        Calendar oldDateInCalendar = Calendar.getInstance();
+        oldDateInCalendar.set(1994, 8, 5);
 
-        String dayOfWeek = calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
-        System.out.println("Day of the Programmer in " + year + " is " + dayOfWeek);
+        long milisecondsDate = currentCalendar.getTimeInMillis() - oldDateInCalendar.getTimeInMillis();
+        Date dateInFormat = new Date(milisecondsDate * 1000);
+
+        System.out.println("The difference between today is " + milisecondsDate + " (in miliseconds)");
+        System.out.println("The difference between today is " + dateInFormat + " (in correct format)");
     }
 }

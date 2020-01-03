@@ -1,24 +1,33 @@
 package tasks;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Task7 {
-    public static void main(String[] argv) {
-        System.out.println("Enter your password (at least 8 characters, numbers, lower and upper letters):");
-        String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}$";
+    public static void main(String[] args) {
+        System.out.println("Please enter a word to check if it is a palindrome - ");
+        Scanner w = new Scanner(System.in);
+        String word = w.nextLine();
 
-        Scanner p = new Scanner(System.in);
-        String password = p.nextLine();
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(password);
+        Task7 palindrome = new Task7();
 
-        while (!matcher.matches()) {
-            System.out.println("Please, enter valid password");
-            password = p.nextLine();
-            matcher = pattern.matcher(password);
+        if (palindrome.isPalindrome(word)) {
+            System.out.println("This is palindrome");
+        } else {
+            System.out.println("This is not palindrome");
         }
-        System.out.println("Your password is correct!");
+    }
+
+    private boolean isPalindrome(String inputData) {
+        int i = inputData.length() - 1;
+        int j = 0;
+
+        while (i > j) {
+            if (inputData.charAt(i) != inputData.charAt(j)) {
+                return false;
+            }
+            i--;
+            j++;
+        }
+        return true;
     }
 }

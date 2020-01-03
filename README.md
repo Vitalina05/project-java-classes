@@ -2,22 +2,10 @@
 Home task as part of MEV roadmap tasks
 
 ## Build and run
-To build and run the sample, go to the src/main/java/taska directory, select needed class and execute the following command:
+To build and run the sample, go to the src/main/java/tasks directory, select needed class and execute the following command:
 
 - javac <ClasName>.java
 - java <ClasName>
 
 Or run class via your IDEA tool:
 - go to needed class and select "Run" option
-
-
-##SQL queries for next purposes:
-    2. Массивы - Найти минимальный и максимальный элемент в массиве.
-    3. Массивы - Нахождение общих элементов двух массивов(2 способа = встроенной функцией и через ручной перебор элементов). 
-    4. Строки - Подсчитать количество вхождений слова в предложении. 
-    5. Строки - Удаление пробелов из строки (2 способа = встроенной функцией и через ручной перебор символов). 
-    6. Строки - Проверить является ли слово палиндромом. 
-    7. Regex - Проверить, надежно ли составлен пароль. Пароль считается надежным, если он состоит из 8 или более символов. Где символом может быть английская буква, цифра и знак подчеркивания. Пароль должен содержать хотя бы одну заглавную букву, одну маленькую букву и одну цифру. 
-    8. Дата и время - Найти разницу между 2-мя датами. 
-    9. Дата и время - Определить, на какой день недели попадает День программиста для указанного года. 
-

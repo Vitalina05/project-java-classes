@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class Task3ManualImpl {
+public class Task4WithBuiltInFunctions {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -27,10 +27,10 @@ public class Task3ManualImpl {
 
         List<Integer> sameElements = new ArrayList<>();
         for (int i : objects) {
-            for (int j : objects2) {
-                if (i == j) sameElements.add(i);
+            if (Arrays.asList(objects2).contains(i)) {
+                sameElements.add(i);
             }
         }
-        System.out.println("Common elements in two arrays are:" +  sameElements);
+        System.out.println("Common elements in two arrays are:" + sameElements);
     }
 }

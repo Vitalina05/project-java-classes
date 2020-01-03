@@ -1,51 +1,25 @@
 package tasks;
 
+import utils.ArrayUtils;
+
 import java.util.Scanner;
 
 class Task3 {
+    public static ArrayUtils propertyValue;
+
     public static void main(String[] args) {
+        propertyValue = new ArrayUtils();
         int n;
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number of elements you wants to enter: " );
-        n=sc.nextInt();
+        System.out.print("Enter number of elements you wants to enter: ");
+        n = sc.nextInt();
 
         int arr[] = new int[n];
-
-        for(int i = 0;i < arr.length; i++)
-        {
-            System.out.print("Enter ["+(i + 1)+"] element: " );
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("Enter [" + (i + 1) + "] element: ");
             arr[i] = sc.nextInt();
         }
-
-        Task3 mm = new Task3();
-
-        System.out.print("Max element in Array is: " +mm.getMax(arr) + "\n");
-        System.out.print("Min element in Array is: " +mm.getMin(arr));
-    }
-
-    private int getMax(int[]inputArray) {
-        int maxElement = inputArray[0];
-
-        for(int i = 1;i < inputArray.length; i++)
-        {
-            if(inputArray[i] > maxElement)
-            {
-                maxElement = inputArray[i];
-            }
-        }
-        return maxElement;
-    }
-
-    private int getMin(int[]inputArray) {
-        int minElement = inputArray[0];
-
-        for(int i = 1;i < inputArray.length; i++)
-        {
-            if(inputArray[i] < minElement)
-            {
-                minElement = inputArray[i];
-            }
-        }
-        return minElement;
+        System.out.print("Max element in Array is: " + propertyValue.getMax(arr) + "\n");
+        System.out.print("Min element in Array is: " + propertyValue.getMin(arr));
     }
 }
